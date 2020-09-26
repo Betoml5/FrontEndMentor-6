@@ -12,7 +12,7 @@ body{
     height: 250px;
     display: flex;
     background-image: url('./images/pattern-bg.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     justify-content: center;
     align-items: center;
     flex-direction: column;

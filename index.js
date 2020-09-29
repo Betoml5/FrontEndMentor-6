@@ -12,7 +12,7 @@ for(let i=0; i<p.length; i++){
 }
 
 async function getIp(){
-    const res = await fetch('http://api.ipify.org/?format=json');
+    const res = await fetch('https://api.ipify.org/?format=json');
     const data = await res.json();
     const { ip } = data;
     getLocation(api, ip)

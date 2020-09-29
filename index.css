@@ -58,7 +58,7 @@ body {
 }
 
 .map {
-  height: 70%;
+  height:67%;
   z-index: 0;
 }
 
@@ -110,6 +110,7 @@ body {
     
 }
 
+
 @media (max-width: 500px) {
   .bubble {
     display: flex;
@@ -143,4 +144,6 @@ body {
     width: 50%;
     outline: none;
 }
+
+
 }

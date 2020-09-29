@@ -7,7 +7,9 @@ const p = document.getElementsByClassName('p-section');
 
 
 
-
+for(let i=0; i<p.length; i++){
+  p[i].innerHTML = "Cargando..."
+}
 
 async function getIp(){
     const res = await fetch('http://api.ipify.org/?format=json');

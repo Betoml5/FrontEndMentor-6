@@ -1,99 +1,146 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
-.banner{
+.banner {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  background-image: url("./images/pattern-bg.png");
+  background-repeat: repeat;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner h2 {
+  margin-bottom: 18px;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.banner-inputs-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner input[type="text"] {
+  padding: 19px;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  width: 26%;
+  outline: none;
+  font-family: 'Rubik';
+}
+
+.banner .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  width: 1%;
+  outline: none;
+  background-color: hsl(0, 0%, 17%);
+  cursor: pointer;
+}
+
+.banner .button img {
+}
+
+.map {
+  height: 70%;
+  z-index: 0;
+}
+
+.bubble {
+  display: flex;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 70%;
+  padding: 35px;
+  border-radius: 14px;
+  justify-content: space-evenly;
+  z-index: 2;
+ 
+}
+
+.bubble_section {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-right: 0.5px solid hsl(0, 0%, 59%);
+  width: 25%;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.bubble_section:last-child {
+  border: none;
+}
+
+.bubble_section h2 {
+  text-transform: uppercase;
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(0, 0%, 59%);
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.bubble_section p{
     width: 100%;
-    height: 250px;
-    display: flex;
-    background-image: url('./images/pattern-bg.png');
-    background-repeat: repeat;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.banner h2{
-    margin-bottom: 18px;
-    font-family: 'Rubik', sans-serif;
-    color: #fff;
-    font-size: 38px;
-    font-weight: 500;
-}
-
-.banner-inputs-container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-
-.banner input[type="text"]{
-    padding: 19px;
-    border: none;
-    border-radius: 10px 0px 0px 10px;
-    width: 26%;
-    outline: none;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Rubik';
     
 }
 
-.banner .button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 19px;
-    border: none;
-    border-radius: 0px 10px 10px 0px;
-    width: 1%;
-    outline: none;
-    background-color: hsl(0, 0%, 17%);
-    cursor: pointer;
-}
-
-.banner .button img{
-    
-}
-
-.map{
-    height: 70%;
-    z-index: 0;
-}
-
-.bubble{
-
+@media (max-width: 500px) {
+  .bubble {
     display: flex;
     background-color: #fff;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
     position: absolute;
     top: 30%;
-    left: 15%;
-    width: 70%;
+    left: 9%;
+    width: 60%;
     padding: 35px;
     border-radius: 14px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
-}
+    flex-direction: column;
+  }
 
-.bubble_section{
+  .bubble_section {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    border-right: .5px solid hsl(0, 0%, 59%);
-    width: 25%;
+    border-right: none;
+    width: 100%;
     align-items: center;
-}
+  }
 
-.bubble_section:last-child{
+  .banner input[type="text"] {
+    padding: 19px;
     border: none;
+    border-radius: 10px 0px 0px 10px;
+    width: 50%;
+    outline: none;
 }
-
-.bubble_section h2{
-    text-transform: uppercase;
-    font-family: 'Rubik';
-    font-weight: 500;
 }

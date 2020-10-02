@@ -4,7 +4,7 @@ const api =
   "https://geo.ipify.org/api/v1?apiKey=at_IGgfN6y8XuYIAyf90S4pk9l3OlLfY&ipAddress=";
 const tilesProvider = "	https://a.tile.openstreetmap.org/{z}/{x}/{y}.png";
 const p = document.getElementsByClassName('p-section');
-
+const bubble = document.getElementById('bubble');
 
 
 for(let i=0; i<p.length; i++){
@@ -42,7 +42,23 @@ async function getLocation(api, ip) {
   }
 }
 
+input_ip.addEventListener('click', (e) => {
+ bubble.classList.add('bubble-class')
+ console.log(e);
+})
+
+
+
 btn_submit.addEventListener("click", () => {
+  if (input_ip.value === "") {
+    alert('Tienes que ingresar una IP');
+    getIp()
+    .then( (ip) => {
+      p[0].innerHTML = ip;
+    })
+  }
+  
+
   getLocation(api, input_ip.value)
   .then((data)=>{
     p[0].innerHTML = input_ip.value

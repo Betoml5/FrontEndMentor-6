@@ -39,6 +39,7 @@ body {
   width: 26%;
   outline: none;
   font-family: 'Rubik';
+  z-index: 100;
 }
 
 .banner .button {
@@ -52,13 +53,14 @@ body {
   outline: none;
   background-color: hsl(0, 0%, 17%);
   cursor: pointer;
+  z-index: 100;
 }
 
 .banner .button img {
 }
 
 .map {
-  height:67%;
+  height:73%;
   z-index: 0;
 }
 
@@ -111,7 +113,14 @@ body {
 }
 
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 425px) {
+
+  .banner h2{
+    font-size: 26px;
+  }
+
   .bubble {
     display: flex;
     background-color: #fff;
@@ -131,10 +140,22 @@ body {
   .bubble_section {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 0px;
     border-right: none;
     width: 100%;
     align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .bubble_section h2{
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .bubble_section p {
+    font-size: 16px;
+    margin-bottom: 12px;
   }
 
   .banner input[type="text"] {
@@ -145,5 +166,22 @@ body {
     outline: none;
 }
 
+.banner input[type="text"]:focus{
+  border: 1px solid #000;
+}
 
+.banner input[type="text"]::placeholder {
+  font-size: 10px;
+}
+
+.banner-inputs-container{
+  margin-bottom: 120px;
+}
+
+}
+
+@media (max-width: 1440px){
+  .map{
+    height: 67%;
+  }
 }
